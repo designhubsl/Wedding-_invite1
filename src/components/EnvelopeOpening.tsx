@@ -25,7 +25,7 @@ const T_FLAP_START = 160; // flap begins slightly after the tap settles
 const T_FLAP_DURATION = 820;
 const T_PEEK_START_OFFSET = 420; // letter peeks a little further out once the flap is ~halfway open
 const T_PEEK_DURATION = 480;
-const T_HOLD_BEFORE_REVEAL = 380;
+const T_HOLD_BEFORE_REVEAL = 10;
 
 export function EnvelopeOpening({ onComplete }: EnvelopeOpeningProps) {
   const [stage, setStage] = useState<Stage>('idle');
