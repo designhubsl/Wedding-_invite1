@@ -58,7 +58,7 @@ export function EnvelopeOpening({ onComplete }: EnvelopeOpeningProps) {
       T_FLAP_START + T_PEEK_START_OFFSET + T_PEEK_DURATION
     );
     window.setTimeout(() => setStage('done'), settledAt + T_HOLD_BEFORE_REVEAL);
-    window.setTimeout(onComplete, settledAt + T_HOLD_BEFORE_REVEAL + 550);
+    window.setTimeout(onComplete, settledAt + T_HOLD_BEFORE_REVEAL + 600);
   }, [onComplete]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
