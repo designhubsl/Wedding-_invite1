@@ -58,7 +58,7 @@ export function EnvelopeOpening({ onComplete }: EnvelopeOpeningProps) {
       T_FLAP_START + T_PEEK_START_OFFSET + T_PEEK_DURATION
     );
     window.setTimeout(() => setStage('done'), settledAt + T_HOLD_BEFORE_REVEAL);
-    window.setTimeout(onComplete, settledAt + T_HOLD_BEFORE_REVEAL + 600);
+    window.setTimeout(onComplete, settledAt + T_HOLD_BEFORE_REVEAL + 500);
   }, [onComplete]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -154,7 +154,7 @@ export function EnvelopeOpening({ onComplete }: EnvelopeOpeningProps) {
             <div
               className="absolute left-1/2 top-0 h-[96%] w-[82%] ease-out"
               style={{
-                transform: `translate(-50%, ${letterPeek ? '2%' : '36%'})`,
+                transform: `translate(-50%, ${letterPeek ? '0%' : '36%'})`,
                 transitionProperty: 'transform',
                 transitionDuration: `${T_PEEK_DURATION}ms`,
                 transitionTimingFunction: 'cubic-bezier(.22, 1, .36, 1)',
@@ -169,7 +169,7 @@ export function EnvelopeOpening({ onComplete }: EnvelopeOpeningProps) {
             className="absolute inset-x-0 bottom-0 h-[120%] overflow-hidden"
             style={{
               zIndex: 20,
-              clipPath: 'polygon(0% 100%, 0% 34%, 50% 34%, 100% 34%, 100% 100%)',
+              clipPath: 'polygon(0% 100%, 0% 40%, 50% 42%, 100% 40%, 100% 100%)',
               borderBottomLeftRadius: '6px',
               borderBottomRightRadius: '6px',
               boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.35)',
